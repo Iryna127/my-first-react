@@ -1,22 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import GreatingText from './components/firstComponetPops';
+import GreatingTextChild from './components/secondComponentsChild';
+import CountingState from './components/countingComponent';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <GreatingText userName="User" />
+        <GreatingTextChild>UserTwo</GreatingTextChild>
+        <CountingState />
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );
