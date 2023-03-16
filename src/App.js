@@ -1,16 +1,14 @@
+import React from 'react';
 import logo from './logo.svg';
+import flover from './flover.jpg';
 import './App.css';
-import GreatingText from './components/firstComponetPops';
-import GreatingTextChild from './components/secondComponentsChild';
-import CountingState from './components/countingComponent';
+import ClockComponent from './components/clock';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <GreatingText userName="User" />
-        <GreatingTextChild>UserTwo</GreatingTextChild>
-        <CountingState />
+      <header className="App-header">      
+        <ClockComponent src={flover} nameofimg="flovers" /* date={this.state.date} *//>
         <img src={logo} className="App-logo" alt="logo" />
       </header>
     </div>
