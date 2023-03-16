@@ -7,8 +7,10 @@ import ClockComponent from './components/clock';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">      
-        <ClockComponent src={flover} nameofimg="flovers" /* date={this.state.date} *//>
+      <header className="App-header">
+        <ClockComponent
+          src={flover}
+          nameofimg="flovers" />
         <img src={logo} className="App-logo" alt="logo" />
       </header>
     </div>

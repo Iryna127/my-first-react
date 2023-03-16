@@ -24,7 +24,7 @@ class ClockComponent extends React.Component {
   }
   shouldComponentUpdate(nextProps, nextState) {
     console.log(nextState.date);
-    console.log(nextProps)
+    console.log(nextProps);
     return nextState.date.getSeconds() % 2 ? false : true;
   }
   render() {
