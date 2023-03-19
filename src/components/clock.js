@@ -4,13 +4,11 @@ import FormattedDate from '../components/date';
 class ClockComponent extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { date: new Date() };
-
-    this.timerID = undefined;
+    this.state = { date: new Date(), time: new Date().toDateString() };
   }
-  componentDidMount(prevProps, prevState) {
+  componentDidMount() {
     this.timerID = setInterval(() => this.tick(), 1000);
-    console.log('prevProps, prevState,', this.state);
+    console.log(this.state);
   }
 
   componentWillUnmount() {
@@ -22,16 +20,12 @@ class ClockComponent extends React.Component {
       date: new Date(),
     });
   }
-  shouldComponentUpdate(nextProps, nextState) {
-    console.log(nextState.date);
-    console.log(nextProps);
-    return nextState.date.getSeconds() % 2 ? false : true;
-  }
   render() {
     const { src } = this.props;
     return (
       <>
-        <FormattedDate date={this.state.date} />
+        <p>{this.state.time}</p>
+        <FormattedDate newDate={this.state.date} />
         <p>{this.props.nameofimg}</p>
         <img src={src} alt="oh" width="400" height="300" />
       </>
